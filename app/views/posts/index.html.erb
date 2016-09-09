@@ -1,11 +1,8 @@
 <h1>DONATE MY BIRTHDAY</h1>
 
-<h3>Sample Post One</h3>
+<% @posts.each do |post| %>
+	<h2><%= post.title %></h2>
+	<p><%=  post.body %></p>
 
-<p><%= @content_first %></p>
-
-<hr>
-
-<h3>Sample Post Two</h3>
-
-<p><%= @content_second %></p>
+	<hr>
+<% end %>

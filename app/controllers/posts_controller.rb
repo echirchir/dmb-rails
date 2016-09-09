@@ -2,8 +2,7 @@ class PostsController < ApplicationController
 
 	def index
 		# create view for this
-		@content_first = 'This is a sample post from an upcoming birthday'
-		@content_second = 'This is another post from another upcoming birthday'
+		@posts = Post.all
 	end
 
 	def new
@@ -20,6 +19,7 @@ class PostsController < ApplicationController
 
 	def show
 		# create view for this
+		@post = Post.find(params[:id])
 	end
 
 	def destroy
